@@ -8,6 +8,7 @@ from pylab import *
 
 def pnpoly(x, y, xyverts):
     """
+    Included code for this matplotlib method directly in file b/c some versions don't have it. 
     inside = pnpoly(x, y, xyverts)
     Return 1 if x,y is inside the polygon, 0 otherwise.
     *xyverts*
@@ -16,13 +17,12 @@ def pnpoly(x, y, xyverts):
     .. deprecated:: 1.2.0
         Use :meth:`~matplotlib.path.Path.contains_point` instead.
     """
-
-
     p = path.Path(xyverts)
     return p.contains_point([x, y])
 
 def points_inside_poly(xypoints, xyverts):
     """
+    Included code for this matplotlib method directly in file b/c some versions don't have it. 
     mask = points_inside_poly(xypoints, xyverts)
     Returns a boolean ndarray, True for points inside the polygon.
     *xypoints*
@@ -38,6 +38,9 @@ def points_inside_poly(xypoints, xyverts):
 
 
 def points_in_polys(points, polys):
+    """
+    This method masks off the water (where data will be unreliable).
+    """
     result = []
     for i, poly in enumerate(polys):
         if i == 0:
@@ -46,8 +49,7 @@ def points_in_polys(points, polys):
             mask = mask | points_inside_poly(points, poly)
     return np.array(mask)
 
-def makeNearestNeighborsDensityPlot(d, col_of_interest, title_string, color_min = 0, color_max = 1, n_neighbors = 50, center_around_america = True, res = .2):
-    cmap = 'bwr'
+def makeNearestNeighborsDensityPlot(d, col_of_interest, title_string, cmap = 'bwr', color_min = 0, color_max = 1, n_neighbors = 50, center_around_america = True, res = .2):
     t0 = time.time()
     if center_around_america:
         min_lat = 15
