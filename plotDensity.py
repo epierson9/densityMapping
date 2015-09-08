@@ -1,3 +1,51 @@
+from sklearn.neighbors import KNeighborsClassifier 
+from matplotlib import path
+import random
+import time
+from mpl_toolkits.basemap import Basemap 
+import numpy as np
+from pylab import *
+
+def pnpoly(x, y, xyverts):
+    """
+    inside = pnpoly(x, y, xyverts)
+    Return 1 if x,y is inside the polygon, 0 otherwise.
+    *xyverts*
+        a sequence of x,y vertices.
+    A point on the boundary may be treated as inside or outside.
+    .. deprecated:: 1.2.0
+        Use :meth:`~matplotlib.path.Path.contains_point` instead.
+    """
+
+
+    p = path.Path(xyverts)
+    return p.contains_point([x, y])
+
+def points_inside_poly(xypoints, xyverts):
+    """
+    mask = points_inside_poly(xypoints, xyverts)
+    Returns a boolean ndarray, True for points inside the polygon.
+    *xypoints*
+        a sequence of N x,y pairs.
+    *xyverts*
+        sequence of x,y vertices of the polygon.
+    A point on the boundary may be treated as inside or outside.
+    .. deprecated:: 1.2.0
+        Use :meth:`~matplotlib.path.Path.contains_points` instead.
+    """
+    p = path.Path(xyverts)
+    return p.contains_points(xypoints)
+
+
+def points_in_polys(points, polys):
+    result = []
+    for i, poly in enumerate(polys):
+        if i == 0:
+            mask = points_inside_poly(points, poly)
+        else:
+            mask = mask | points_inside_poly(points, poly)
+    return np.array(mask)
+
 def makeNearestNeighborsDensityPlot(d, col_of_interest, title_string, color_min = 0, color_max = 1, n_neighbors = 50, center_around_america = True, res = .2):
     cmap = 'bwr'
     t0 = time.time()
