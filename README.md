@@ -1,6 +1,8 @@
 # densityMapping
 Python tools for creating density maps of events (drunk tweets, police shootings, etc)
 
+![Alt text](wine_vs_beer.tiff?raw=true "Optional Title")
+
 Can be used in two ways. Run plotDensity.py to see examples of both. sample_data.csv contains a sample data file. 
 
 Way 1: You have a file of latitude, longitude pairs and you want to see where they cluster most densely. Eg, I want to plot the density of police shootings. Uses kernel density estimation. 
