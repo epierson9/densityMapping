@@ -11,4 +11,4 @@ Way 2: You have a file with two types of latitude, longitude pairs: points of in
 
 This code requires pylab, sklearn, numpy, and pandas to run. 
 
-Please contact Emma Pierson (emmap1 "at" cs "dot" stanford "dot" edu) with questions, comments, requests, or bugs, or see [blog post](https://www.obsessionwithregression.blogspot.com) or [Quartz](http://qz.com/504533/where-people-drink-wine-and-beer/) [articles](http://qz.com/504779/maps-drunk-twitter-tells-us-what-europeans-drink/) for full details. 
+Please contact Emma Pierson (emmap1 "at" cs "dot" stanford "dot" edu) with questions, comments, requests, or bugs, or see [blog post](http://www.obsessionwithregression.blogspot.com) or [Quartz](http://qz.com/504533/where-people-drink-wine-and-beer/) [articles](http://qz.com/504779/maps-drunk-twitter-tells-us-what-europeans-drink/) for full details. 
