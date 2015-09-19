@@ -1,7 +1,7 @@
 # densityMapping
 Python tools for creating density maps of events (drunk tweets, police shootings, etc)
 
-![Alt text](wine_vs_beer.tiff?raw=true "Optional Title")
+![Alt text](wine_vs_beer.png?raw=true "Optional Title")
 
 Can be used in two ways. Run plotDensity.py to see examples of both. sample_data.csv contains a sample data file. 
 

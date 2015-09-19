@@ -145,7 +145,7 @@ def generateSimulatedData():
     lats = list(35 + (np.random.random([2000,]) - .5) * 10)
     longs = list(-100 + (np.random.random([1000,]) - .5) * 20) + list(-80 + (np.random.random([1000,]) - .5) * 20)
     is_pizza_shop = [1 for i in range(1000)] + [0 for i in range(1000)] 
-    d = pd.DataFrame({'lat':lats, 'lon':longs, 'pizza_shops':is_pizza_shop})
+    d = pd.DataFrame({'lat':lats, 'lon':longs, 'shop_is_pizza_shop':is_pizza_shop})
     d.to_csv('sample_data.csv', index_col = False)
 
 if __name__ == '__main__':
@@ -154,6 +154,6 @@ if __name__ == '__main__':
     print "Making plot without normalizing!"
     makeNearestNeighborsDensityPlot(filename, col_of_interest = None, title_string = "Overall Shop Density")
     print "Making plot with normalizing!"
-    makeNearestNeighborsDensityPlot(filename, col_of_interest = "pizza_shops", title_string = "Fraction of Shops which are Pizza Shops")
+    makeNearestNeighborsDensityPlot(filename, col_of_interest = "shop_is_pizza_shop", title_string = "Fraction of Shops which are Pizza Shops")
 
 
