@@ -1,5 +1,5 @@
 # densityMapping
-Python tool for creating density maps of events (drunk tweets, police shootings, etc). Map below shows a sample map created using Twitter data: color denotes the fraction of #beer or #wine tweets which are about #wine, with redder areas 
+Python tool for creating density maps of events (drunk tweets, police shootings, etc). Below is a sample map created with this tool using Twitter data: color denotes the fraction of #beer or #wine tweets which are about #wine, with redder areas indicating more wine. 
 
 ![Alt text](wine_vs_beer.png?raw=true "Beer and Wine Tweets in Europe")
 
@@ -11,4 +11,4 @@ Way 2: You have a file with two types of latitude, longitude pairs: points of in
 
 This code requires pylab, sklearn, numpy, and pandas to run. 
 
-Please contact Emma Pierson (emmap1 "at" cs "dot" stanford "dot" edu) with questions, comments, requests, or bugs, or see blog post for full details. [Absolute README link](https://www.google.com)
+Please contact Emma Pierson (emmap1 "at" cs "dot" stanford "dot" edu) with questions, comments, requests, or bugs, or see [blog post](https://wwww.obsessionwithregression.blogpost.com) or [Quartz](http://qz.com/504533/where-people-drink-wine-and-beer/) [articles](http://qz.com/504779/maps-drunk-twitter-tells-us-what-europeans-drink/) for full details. 
